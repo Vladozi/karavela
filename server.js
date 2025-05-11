@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER, // From environment
-    pass: process.env.EMAIL_PASS  // From environment
+    user: "ladosichinava263@gmail.com", // From environment
+    pass: "lnnx gcvl ugjn anfc" // From environment
   }
 });
 app.use(express.static(path.join(__dirname, 'public')));
@@ -37,9 +37,9 @@ app.post('/api/book-table', async (req, res) => {
     }
 
     await transporter.sendMail({
-      from: `"Order" <${process.env.EMAIL_USER}>`,
+      from: `"Order" <ladosichianva263@gmail.com>`,
       replyTo: `"${name}" <${email}>`,
-      to: process.env.RECEIVING_EMAIL,
+      to: "programming304@gail.com",
       subject: 'ახალი შეკვეთა',
       html: `
         <h2>ახალი შეკვეთა</h2>
@@ -77,8 +77,8 @@ app.post('/api/contact', async (req, res) => {
     }
 
     await transporter.sendMail({
-      from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.RECEIVING_EMAIL,
+      from: `"Website Contact" <ladosichinava263@gmail.com>`,
+      to: "programming304@gmail.com",
       subject: `New Contact: ${name}`,
       html: `
         <h3>ახალი შეტყობინება</h3>
