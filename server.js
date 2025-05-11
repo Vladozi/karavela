@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS  // From environment
   }
 });
-app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html')); // Now points to root
