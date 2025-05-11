@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-require('dotenv').config(); // Add this
+
 
 const app = express();
 app.use(cors());
@@ -17,6 +17,12 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS  // From environment
   }
 });
+app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html')); // Now points to root
+});
+
 
 // Book a Table endpoint
 app.post('/api/book-table', async (req, res) => {
