@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>რესტორანი-კარაველა</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpeg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+<!-- Notification Container -->
+<div id="notification" class="notification" style="display: none;">
+  <i class="bi bi-check-circle-fill"></i>
+  <span id="notification-message"></span>
+</div>
+  <header id="header" class="header fixed-top">
+
+   
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">კარაველა</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">მთავარი<br></a></li>
+            <li><a href="#about">ჩვენს შესახებ</a></li>
+            <li><a href="#menu">მენიუ</a></li>
+            <!-- <li><a href="#specials">Specials</a></li> -->
+            <!-- <li><a href="#events">Events</a></li> -->
+            <!-- <li><a href="#chefs">შეფ მზარეულები</a></li> -->
+            <li><a href="#gallery">გალერეა</a></li>
+            <!-- <li class="dropdown"><a href="#"><span></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <li><a href="#contact">კონტაქტი</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-book-a-table d-none d-xl-block" href="#book-a-table">დაჯავშნე მაგიდა</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/interier5.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
+            <h2 data-aos="fade-up" data-aos-delay="100">მოგესალმებით <span>კარაველაში</span></h2>
+            <p data-aos="fade-up" data-aos-delay="200">აქ იწყება დაუვიწყარი მოგონებები!</p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="#menu" class="cta-btn">ჩვენი მენიუ</a>
+              <a href="#book-a-table" class="cta-btn">დაჯავშნე მაგიდა</a>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+            <a href="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Ftata.murachashvili%2Fvideos%2F584594287910477%2F&show_text=false&width=267&t=0" height="500px" width="350px" class="glightbox pulsating-play-btn"></a>
+            
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="assets/img/interier7.jpg" class="img-fluid about-img" alt="">
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1 content">
+            <h3> ჩვენს შესახებ</h3>
+            <!-- <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+            </ul> -->
+            <p>
+              "კარაველა" ქართულ-ევროპული სამზარეულოს მქონე რესტორანია, სადაც როგორც ტრადიციულ, ასევე მთავარი (შეფ) მზარეულის სპეციალური კერძების 
+              დაგემოვნებას შეძლებ.რესტორანი ,<sub>"</sub>კარაველა" მყუდრო და რომანტიულ გარემოსთან ერთად, სტუმრებს ნამდვილი ქართული ტრადიციული სტუმართმოყვარეობით უმასპინძლდება.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>რატომ ჩვენ</h2>
+        <p>რატომ უნდა აირჩიო ჩვენი რესტორანი</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <span>01</span>
+              <h4>გარემო</h4>
+              <p>ჩვენთან უნიკალური გარემოა,რომელიც აერთიანებს როგორც კლასიკურ ,ასევე თანამედროვე დიზაინს,ულამაზესი ხედებითა და გაფორმებებით</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <span>02</span>
+              <h4>მომსახურება</h4>
+              <p>სწრაფი,ხარისხიანი და თბილი მომსახურება უთბილესი ხალხისგან</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>03</span>
+              <h4>კერძები</h4>
+              <p>ახალი,უგემრიელესი და ოსტატურად მომზადებული კერძები ქართულ-უცხოური სამზარეულოდან</p>
+            </div>
+          </div><!-- Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>მენიუ</h2>
+        <p>იხილეთ უგემრიელესი მენიუ</p>
+      </div><!-- End Section Title -->
+
+      <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul class="menu-filters isotope-filters">
+              <li data-filter="*" class="filter-active">ყველა</li>
+              <li data-filter=".filter-starters">სტარტერი</li>
+              <li data-filter=".filter-salads">სალათები</li>
+              <li data-filter=".filter-specialty">სპეციალური</li>
+            </ul>
+          </div>
+        </div><!-- Menu Filters -->
+
+        <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item isotope-item filter-salads">
+            <img src="assets/img/menu/krevetiscezari.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">ცეზარი კრევეტით</a><span>$5.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div> -->
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="assets/img/menu/pica.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">პიცა</a><span>$6.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div> -->
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="assets/img/menu/qababi.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">ქაბაბი</a><span>$7.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div> -->
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/qatmisMwvadi.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">ქათმის მწვადი</a><span>$8.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div> -->
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/gallery/galerea12.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">ხინკალი</a><span>$9.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+            </div> -->
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/supi.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">წვნიანი</a><span>$4.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div> -->
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="assets/img/menu/sokoKecze.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">სოკო კეცზე</a><span>$9.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Fresh spinach, crisp romaine, tomatoes, and Greek olives
+            </div> -->
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="assets/img/menu/tevzi.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">თევზი</a><span>$9.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            </div> -->
+          </div><!-- Menu Item -->
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/gorisKanwismenu.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">ღორის "კანჭი"</a><span>$9.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            </div> -->
+          </div><!-- Menu Item -->
+
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="assets/img/menu/tevzisMwvadi.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">თევზის მწვადი</a><span>$12.95</span>
+            </div>
+            <!-- <div class="menu-ingredients">
+              Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+            </div> -->
+          </div><!-- Menu Item -->
+
+        </div><!-- Menu Container -->
+
+      </div>
+
+    </section><!-- /Menu Section -->
+
+   
+    
+    <!-- Book A Table Section -->
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>დაჯავშნა</h2>
+        <p>მაგიდის დაჯავშნა</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <form id="booking-form" class="php-email-form">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <input type="text" name="name" class="form-control" id="name" placeholder="სახელი" required>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="email" class="form-control" name="email" id="email" placeholder="მეილი" required>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="მობილური" required>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="date" name="date" class="form-control" id="date" required>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="time" class="form-control" name="time" id="time" required>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="number" class="form-control" name="people" id="people" placeholder="ხალხის რაოდენობა" min="1" required>
+            </div>
+          </div>
+        
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="შეტყობინება"></textarea>
+          </div>
+        
+          <div class="text-center mt-3">
+            <button type="submit">დაჯავშნა</button>
+          </div>
+        </form>
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
+<!-- Events Section -->
+<section id="events" class="events section">
+
+  <img class="slider-bg" src="assets/img/events-bg.jpg" alt="" data-aos="fade-in">
+
+  <div class="container">
+
+    <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>მიმოხილვები</h2>
+        <p>რას ფიქრობენ მომხმარებლები ჩვენზე</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" "="">
+            <p>
+              <i class=" bi bi-quote quote-icon-left"></i>
+                <span>საუკეთესო პერსონალი გყავთ, წლებია თქვენი მუდმივი და ხშირი სტუმრები ვართ და ძირითადი განმაპირობებელი მიზეზი ზუსტად თქვენი სტაფია, 
+                  სახელები რო არ გამომრჩეს არ ჩამოვთვლი. უზომოდ პოზიტიურები,
+                   ყურადღებიანები და პროფესიონალები ❤️ ძალიან დიდი მადლობა თითოეულ მათგანს ❤️❤️.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>სოფო მეტრეველი</h3>
+         
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>უგემრიელესია ყველაფერი ,  გაოცებული დავრჩი ხედით და საჭმელებით არ მქონია შემთხვევა 
+                    სადაც რესტორანში შეკვეთილი საჭმელებიდან ყველა მომწენებია , მაგრამ ამ რესტორანშო ყველაფერი იდიალური იყო❤️❤️ 
+                    სტაფი ძალიან მოკრძალებული და ზრდილობიანი , ყურადღებიანი, რაც მთავარია ღიმილით გვემსახურებოდნენ ❤️❤️ უდაოდ 100% ტიანი სისუფთავე იყო , 
+                    უღრმესი მადლობა ერთ ერთი ჩემი ფავორიტი რესტორანია დაგემოვნების დღიდანვე ❤️❤️💙 </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>ნანა ზამთარაძე</h3>
+              
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>დიახ მოგახსენებთ, ყველაფერი  არა ჩვეულებრივი და გემრიელი, ბევრჯერ ვარ ნამყოფი გმადლობთ</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>ბაჩო</h3>
+               
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>ძალიან მაგარი რესტორანი თავის მუსიკით პერსონალით და საკვებით👍😍 ყველას ვურჩევ ამ რესტორანს ნამდვილად ისიამოვნებთ ყველაფრით😍 გარემო ხომ საერთოდ perfect 💯😍</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>ჯანო ცაბაძე</h3>
+              
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>ძალიან სასიამოვნო გარემო🌿☘️მშვიდი მუსიკა🎶🎻და საოცრად გემრიელი კერძები🍢🍴
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>ვიკა</h3>
+               
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>გალერეა</h2>
+        <p>ფოტოები ჩვენი რესტორნიდან</p>
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea1.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea2.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea3.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea 5.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea 5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea11.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea11.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea8.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea7.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/galerea9.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/galerea9.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Chefs Section -->
+   <!-- /Chefs Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>კონტაქტი</h2>
+        <p>დაგვიკავშირდით</p>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+       
+        <iframe  style="border:0; width: 100%; height: 400px;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.637406928436!2d44.83739467660842!3d41.7634444725842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446d22bed8c275%3A0x4843c82a48501188!2z4YOZ4YOQ4YOg4YOQ4YOV4YOU4YOa4YOQ!5e1!3m2!1sen!2sge!4v1746801813410!5m2!1sen!2sge" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>ლოკაცია</h3>
+                <p>ექიმების ქუჩა, თბილისი, საქართველო</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>სამუშაო საათები</h3>
+                <p>ორშაბათი-კვირა:<br>11:00 - 2:00</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>დაგვირეკეთ ნომერზე</h3>
+                <p>+995-555-568-877</p>
+              </div>
+            </div><!-- End Info Item -->
+
+           
+
+          </div>
+
+          <div class="col-lg-8">
+            <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" id="contact-name" class="form-control" placeholder="სახელი" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" name="email" id="contact-email" class="form-control" placeholder="მეილი" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" name="phone" id="contact-phone" class="form-control" placeholder="ტელეფონი" required>
+                </div>
+                <div class="col-md-12">
+                  <textarea name="message" id="contact-message" class="form-control" rows="6" placeholder="შეტყობინება" required></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="loading">იტვირთება</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">შეტყობინება გაგზავნილია. მადლობა!</div>
+                  <button type="submit">შეტყობინების გაგზავნა</button>
+                </div>
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top" >
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">კარაველა</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>ექიმების ქუჩა</p>
+            <p>თბილისი,საქართველო</p>
+            <p class="mt-3"><strong>მობილური:</strong> <span>+995-555-568-877</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>გამოსადეგი ლინკეები</h4>
+          <ul>
+            <li><a href="#">მთავარი</a></li>
+            <li><a href="#">ჩვენს შესახებ</a></li>
+            <li><a href="#">სერვისები</a></li>
+            <li><a href="#">კონფიდენციალურობის პოლიტიკა</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>ჩვენი სერვისები</h4>
+          <ul>
+            <li><a href="#">გამოძახება</a></li>
+            <li><a href="#">ქორწილი</a></li>
+            <li><a href="#">დაბადების დღე</a></li>
+            <li><a href="#">ქელეხი</a></li>
+            <li><a href="#">ბანკეტი</a></li>
+          </ul>
+        </div> -->
+
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> 2025  <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+       
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
