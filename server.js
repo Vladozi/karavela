@@ -1,3 +1,4 @@
+require('dotenv').config();  // Loads environment variables from .env
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
