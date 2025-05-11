@@ -240,7 +240,7 @@ document.getElementById('booking-form').addEventListener('submit', async (e) => 
   };
   
   try {
-    const response = await fetch('http://localhost:3000/api/book-table', {
+    const response = await fetch('https://karavela.onrender.com/api/book-table', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
@@ -280,7 +280,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
   try {
     console.log('Form submission started...');
     
-    const response = await fetch('http://localhost:3000/api/contact', {
+    const response = await fetch('https://karavela.onrender.com/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
