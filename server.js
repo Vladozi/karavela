@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
+const path = require('path');
 
 // Basic middleware
 app.use(express.json());
