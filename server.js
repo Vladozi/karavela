@@ -3,8 +3,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const path = require('path'); 
 
+app.use(express.static(path.join(__dirname, 'assets')));
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -94,6 +99,10 @@ app.post('/api/contact', async (req, res) => {
       message: 'შეცდომა გაგზავნისას' 
     });
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
