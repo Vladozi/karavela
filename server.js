@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
-const path = require('path');
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -13,14 +13,9 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "ladosichinava263@gmail.com", // From environment
-    pass: "lnnx gcvl ugjn anfc" // From environment
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS
   }
-});
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); // Now points to root
 });
 
 
@@ -39,7 +34,7 @@ app.post('/api/book-table', async (req, res) => {
     await transporter.sendMail({
       from: `"Order" <ladosichianva263@gmail.com>`,
       replyTo: `"${name}" <${email}>`,
-      to: "programming304@gail.com",
+      to: "orderskaravela@gmail.com",
       subject: 'ახალი შეკვეთა',
       html: `
         <h2>ახალი შეკვეთა</h2>
@@ -78,7 +73,7 @@ app.post('/api/contact', async (req, res) => {
 
     await transporter.sendMail({
       from: `"Website Contact" <ladosichinava263@gmail.com>`,
-      to: "programming304@gmail.com",
+      to: "orderskaravela@gmail.com",
       subject: `New Contact: ${name}`,
       html: `
         <h3>ახალი შეტყობინება</h3>
