@@ -26,11 +26,20 @@ app.post('/api/book-table', async (req, res) => {
     }
     
     await transporter.sendMail({
-      from: `"Order" <ladosichianva263@gmail.com>`,
+      from: `"შეკვეთა" <ladosichianva263@gmail.com>`,
       replyTo: `"${name}" <${email}>`,
       to: "orderskaravela@gmail.com",
-      subject: 'New Booking',
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`
+      subject: 'ახალი შეკვეთა',
+      html: `
+      <h2>ახალი შეკვეთა</h2>
+      <p><strong>სახელი:</strong> ${name}</p>
+      <p><strong>მეილი:</strong> ${email}</p>
+      <p><strong>მობილური:</strong> ${phone}</p>
+      <p><strong>თარიღი:</strong> ${date}</p>
+      <p><strong>დრო:</strong> ${time}</p>
+      <p><strong>ხალხის რაოდენობა:</strong> ${people}</p>
+      <p><strong>შეტყობინება:</strong> ${message || 'None'}</p>
+    `
     });
     
     res.json({ success: true });
@@ -48,11 +57,18 @@ app.post('/api/contact', async (req, res) => {
     }
     
     await transporter.sendMail({
-      from: `"Order" <ladosichianva263@gmail.com>`,
+      from: `"შეტყობინება" <ladosichianva263@gmail.com>`,
       replyTo: `"${name}" <${email}>`,
       to:  "orderskaravela@gmail.com",
-      subject: 'New Contact',
-      text: message
+      subject: 'ახალი შეტყობინება',
+      html: `
+      <h3>ახალი შეტყობინება</h3>
+      <p><strong>სახელი:</strong> ${name}</p>
+      <p><strong>მეილი:</strong> ${email}</p>
+      <p><strong>ტელეფონი:</strong> ${phone}</p>
+      <p><strong>შეტყობინება:</strong></p>
+      <p>${message || 'არ არის მითითებული'}</p>
+    `
     });
     
     res.json({ success: true });
