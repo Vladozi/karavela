@@ -322,7 +322,7 @@ if (contactForm) {
         body: JSON.stringify({
           name: elements.name.value,
           email: elements.email.value,
-          // phone: elements.phone.value, // Removed as backend /api/contact doesn't use it
+          phone: elements.phone.value, 
           message: elements.message.value
         })
       });

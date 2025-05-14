@@ -20,8 +20,8 @@ const transporter = nodemailer.createTransport({
 // Simple route handlers
 app.post('/api/book-table', async (req, res) => {
   try {
-    const { name, email, phone, date, time } = req.body;
-    if (!name || !email || !phone || !date || !time) {
+    const { name, email, phone, date, time,people,message } = req.body;
+    if (!name || !email || !phone || !date || !time || !people) {
       return res.status(400).json({ error: 'Missing fields' });
     }
     
@@ -51,8 +51,8 @@ app.post('/api/book-table', async (req, res) => {
 
 app.post('/api/contact', async (req, res) => {
   try {
-    const { name, email, message } = req.body;
-    if (!name || !email) {
+    const { name, email, message ,phone} = req.body;
+    if (!name || !email || !phone) {
       return res.status(400).json({ error: 'Missing fields' });
     }
     
