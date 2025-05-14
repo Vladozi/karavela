@@ -1,136 +1,70 @@
 require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
-const path = require('path');
-
 const app = express();
 
-// Middleware setup
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname))); // Serve from root
+// Basic middleware
+app.use(express.json());
+app.use(express.static(__dirname)); // Serve static files from root
 
-// // Serve static assets from proper directories
-// app.use('/css', express.static(path.join(__dirname, 'assets', 'css')));
-// app.use('/js', express.static(path.join(__dirname, 'assets', 'js')));
-// app.use('/img', express.static(path.join(__dirname, 'assets', 'img')));
-// app.use('/scss', express.static(path.join(__dirname, 'assets', 'scss')));
-// app.use('/vendor', express.static(path.join(__dirname, 'assets', 'vendor')));
-
-// Main route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-// Email transporter configuration
+// Email configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS
-  },
-  tls: {
-    rejectUnauthorized: false // For development only, remove in production if you have valid certs
   }
 });
 
-// API Endpoints
+// Simple route handlers
 app.post('/api/book-table', async (req, res) => {
   try {
-    const { name, email, phone, date, time, people, message } = req.body;
-
-    // Validation
+    const { name, email, phone, date, time } = req.body;
     if (!name || !email || !phone || !date || !time) {
-      return res.status(400).json({ 
-        status: 'error', 
-        message: 'Missing required fields' 
-      });
+      return res.status(400).json({ error: 'Missing fields' });
     }
-
-    // Email sending
+    
     await transporter.sendMail({
-      from: `"Restaurant Booking" <${process.env.GMAIL_USER}>`,
-      replyTo: `"${name}" <${email}>`,
-      to: process.env.ORDER_EMAIL || "orderskaravela@gmail.com",
-      subject: 'New Table Booking',
-      html: `
-        <h2>New Booking Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Date:</strong> ${date}</p>
-        <p><strong>Time:</strong> ${time}</p>
-        <p><strong>People:</strong> ${people || 'Not specified'}</p>
-        <p><strong>Message:</strong> ${message || 'None'}</p>
-      `
+      to: process.env.ORDER_EMAIL,
+      subject: 'New Booking',
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`
     });
-
-    res.json({ status: 'success', message: 'Booking request sent' });
-
+    
+    res.json({ success: true });
   } catch (error) {
     console.error('Booking error:', error);
-    res.status(500).json({ 
-      status: 'error', 
-      message: 'Failed to send booking request',
-      error: process.env.NODE_ENV === 'development' ? error.message : null
-    });
+    res.status(500).json({ error: 'Server error' });
   }
 });
 
 app.post('/api/contact', async (req, res) => {
   try {
-    const { name, email, phone, message } = req.body;
-
-    if (!name?.trim() || !email?.trim() || !phone?.trim()) {
-      return res.status(400).json({ 
-        success: false,
-        message: 'Please fill all required fields' 
-      });
+    const { name, email, message } = req.body;
+    if (!name || !email) {
+      return res.status(400).json({ error: 'Missing fields' });
     }
-
+    
     await transporter.sendMail({
-      from: `"Website Contact" <${process.env.GMAIL_USER}>`,
-      to: process.env.ORDER_EMAIL || "orderskaravela@gmail.com",
-      subject: `New Contact: ${name}`,
-      html: `
-        <h3>New Contact Message</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message || 'No message provided'}</p>
-      `
+      to: process.env.ORDER_EMAIL,
+      subject: 'New Contact',
+      text: message
     });
-
-    res.json({ success: true, message: 'Message sent successfully!' });
-
+    
+    res.json({ success: true });
   } catch (error) {
     console.error('Contact error:', error);
-    res.status(500).json({ 
-      success: false,
-      message: 'Error sending message',
-      error: process.env.NODE_ENV === 'development' ? error.message : null
-    });
+    res.status(500).json({ error: 'Server error' });
   }
 });
 
-// Handle 404 and SPA routing
+// Serve index.html for all other routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Server Error');
 });
 
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`Visit: http://localhost:${PORT}`);
-  }
+  console.log(`Access at: http://localhost:${PORT}`);
 });
