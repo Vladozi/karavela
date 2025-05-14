@@ -7,7 +7,7 @@ const path = require('path');
 // Basic middleware
 app.use(express.json());
 app.use(express.static(__dirname)); // Serve static files from root
-
+app.use(express.urlencoded({ extended: true }));
 // Email configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail',
