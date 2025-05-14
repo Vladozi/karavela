@@ -10,16 +10,19 @@ const app = express();
 // Middleware setup
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public'))); // Changed from 'assets' to 'public' for better convention
+app.use(express.static(path.join(__dirname))); // Serve from root
 
-// Serve static files
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+// // Serve static assets from proper directories
+// app.use('/css', express.static(path.join(__dirname, 'assets', 'css')));
+// app.use('/js', express.static(path.join(__dirname, 'assets', 'js')));
+// app.use('/img', express.static(path.join(__dirname, 'assets', 'img')));
+// app.use('/scss', express.static(path.join(__dirname, 'assets', 'scss')));
+// app.use('/vendor', express.static(path.join(__dirname, 'assets', 'vendor')));
 
-// Routes
+// Main route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
-
 // Email transporter configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -114,7 +117,7 @@ app.post('/api/contact', async (req, res) => {
 
 // Handle 404 and SPA routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Error handling middleware
