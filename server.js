@@ -26,6 +26,8 @@ app.post('/api/book-table', async (req, res) => {
     }
     
     await transporter.sendMail({
+      from: `"Order" <ladosichianva263@gmail.com>`,
+      replyTo: `"${name}" <${email}>`,
       to: "orderskaravela@gmail.com",
       subject: 'New Booking',
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`
@@ -46,6 +48,8 @@ app.post('/api/contact', async (req, res) => {
     }
     
     await transporter.sendMail({
+      from: `"Order" <ladosichianva263@gmail.com>`,
+      replyTo: `"${name}" <${email}>`,
       to:  "orderskaravela@gmail.com",
       subject: 'New Contact',
       text: message
